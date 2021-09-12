@@ -1,0 +1,53 @@
+<html lang="pl">
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+
+  <title>Document</title>
+</head>
+
+
+<body>
+
+  <section>
+    <div class="container-12 p-5">
+      <div class="row mb-5 border">
+        <h2 class="display-5 mb-4">Categories:</h2>
+        <div class="col-12">
+          <app-categories [categories]="this.categories" (selectedCategory)="select_category($event)"></app-categories>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 mt-3">
+          <app-offers [offers]="this.offers" (selectedOffer)="select_offer($event)"></app-offers>
+        </div>
+
+        <div class="col-8 py-3 px-5 ">
+          <app-offer-details [offer]="this.selected_offer"></app-offer-details>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

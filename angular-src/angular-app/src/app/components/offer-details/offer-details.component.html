@@ -1,0 +1,16 @@
+<ng-container *ngIf="offer != null">
+  <h3>Title: </h3>
+  <p>{{offer.title}}</p>
+  <hr>
+  <h3>Description: </h3>
+  <p>{{offer.description}}</p>
+  <hr>
+  <h3>Price: </h3>
+  <p>{{offer.price}}</p>
+  <hr>
+  <h3>Category: </h3>
+  <ng-container *ngIf="category != null">
+    <p>{{category.name}}</p>
+  </ng-container>
+
+</ng-container>

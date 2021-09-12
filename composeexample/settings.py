@@ -24,8 +24,14 @@ SECRET_KEY = 'django-insecure-8e40)&0pacroljb*b=p3_9eu^cz+5l==v*hcw)6+%%l#gumi(w
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+CORS_ALLOW_ALL_ORIGINS = True
+"""CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",
+    "http://localhost:80"
+]"""
+ALLOWED_HOSTS = [
 
-ALLOWED_HOSTS = []
+]
 
 
 # Application definition
@@ -37,12 +43,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'corsheaders',
+    'django_filters',
     'Offer'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -67,6 +77,13 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+
+    ),
+}
 
 WSGI_APPLICATION = 'composeexample.wsgi.application'
 

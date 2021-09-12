@@ -1,0 +1,8 @@
+<ng-container *ngFor="let offer of offers">
+  <div class="row m-1" (click)="select_offer(offer)">
+    <div class="col-12 btn btn-primary p-2">
+      {{offer.title}}
+    </div>
+
+  </div>
+</ng-container>

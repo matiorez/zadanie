@@ -1,0 +1,9 @@
+<span class="badge bg-primary p-3 m-1" (click)="select_category(null)">
+  All
+</span>
+<ng-container *ngFor="let category of categories">
+  <span class="badge bg-primary p-3 m-1" (click)="select_category(category)">
+    {{category.name}}
+  </span>
+
+</ng-container>
