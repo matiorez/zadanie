@@ -11,7 +11,7 @@ export class ApiServiceService {
 
   baseUrl = 'http://127.0.0.1:8000/';
   baseOfferUrl = `${this.baseUrl}api/offers/`;
-  baseCategoryUrl = `${this.baseUrl}api/categories/`;
+  baseCategoryUrl = `${this.baseUrl}api/category/`;
 
   constructor(private httpClient: HttpClient) { }
 
