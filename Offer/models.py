@@ -7,6 +7,8 @@ class Category(models.Model):
     def __str__(self):
         return "{}".format(self.name)
 
+    class Meta:
+        ordering = ('ordering',)
 class Offer(models.Model):
     title = models.CharField(max_length=50,null=False,blank=False)
     description = models.TextField(max_length=500,null=False,blank=False)
